@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table >
+    <tr >
+        <td align="center">学生id</td>
+        <td align="center">学生姓名</td>
+        <td align="center">老师id</td>
+        <td align="center">老师姓名</td>
+
+    </tr>
+    <br>
+    {% for stu in  name %}
+        <tr>
+            <td align="center">{{ stu.s_id }}</td>
+            <td align="center">{{ stu.s_name }}</td>
+            <td align="center">{{ stu.student_id }}</td>
+            <td align="center">{{ stu.student.t_name }}</td>
+        </tr>
+
+    {% endfor %}
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td ><a href="http://127.0.0.1:8000/add1">添加学生名单</a></td>
+    </tr>
+</table>
+<img src="{% static 'img/test.jpg' %}">
+</body>
+</html>
